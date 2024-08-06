@@ -1,5 +1,6 @@
 "use client";
 import * as React from 'react';
+import Link from 'next/link'
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { TextareaAutosize as BaseTextareaAutosize } from '@mui/base/TextareaAutosize';
@@ -74,7 +75,7 @@ export default function LoginPage() {
                 } else {
                     sessionStorage.setItem('user', JSON.stringify(user));
                 }
-                router.push('/dashboard');
+                router.push('/dashbord');
             } else {
                 alert('Invalid username or password');
             }
